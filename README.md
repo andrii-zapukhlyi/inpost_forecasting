@@ -12,17 +12,19 @@ Import, preprocess, analyze the provided datasets and develop predictive models 
 
 ## Achievements
 
-After analyzing and merging the datasets, I built machine learning models to predict the number of transmissions. The XGBoost model achieved the best performance with the following results:
+After analyzing and merging the datasets, I built machine learning models to predict the number of transmissions. The XGBoost model achieved the best performance with the following results after hyperparameter tuning:
 
-- **R² Score:** 0.97
-- **Mean Squared Error (MSE):** 0.03
-- **Mean Absolute Error (MAE):** 0.12
+- **R² Score:** 0.98
+- **Root Mean Squared Error (RMSE):** 12563
+- **Mean Absolute Error (MAE):** 8984
+- **Cross-Validation Score (RMSE):** 13222
 
-These results demonstrate that the model accurately predicts transmissions, explaining about 97% of the variance with minimal error. Additionally, cross-validation and performance metrics indicate no signs of overfitting. 
+These results demonstrate that the model accurately predicts transmissions, explaining about 98% of the variance with minimal error. The RMSE and MAE values are relatively low compared with the target range. <br>
+The model is slightly overfitted because the gap between training and testing is big, but it can be fixed with regularization or feature selection.
 
 ##### Suggestions for further improving the model:
-- Feature Engineering
-- Enhanced GPU Utilization
-- Advanced Data preprocessing techniques
+- Feature Engineering / Selection
+- GPU acceleration
+- Better hyperparameter tuning 
 
 Overall, the **XGBoost model** provides a robust and reliable solution for forecasting future transmissions. 
